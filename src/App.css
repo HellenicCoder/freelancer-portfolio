@@ -1,38 +1,241 @@
-.App {
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+body {
+  margin: 0;
+  background: #f7f9fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #232946;
+}
+
+.portfolio-root {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44,62,80,0.09);
+  padding: 32px 18px 18px 18px;
+}
+
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e5eaf2;
+}
+
+.avatar-block {
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #232946;
+  background: #fff;
+}
+
+.portfolio-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.4rem;
+  color: #232946;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #5c6e91;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.social-links a {
+  font-size: 1.6rem;
+  color: #232946;
+  transition: color 0.2s;
+}
+.social-links a:hover {
+  color: #2979ff;
+}
+
+.btn-main {
+  display: inline-block;
+  background: #2979ff;
+  color: #fff;
+  padding: 0.7rem 2.1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-main:hover {
+  background: #232946;
+}
+
+.hero {
   text-align: center;
+  margin: 2.5rem 0 1.8rem 0;
+}
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.7rem;
+  color: #232946;
+}
+.hero p {
+  color: #555;
+  font-size: 1.13rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.skills {
+  margin-bottom: 2.5rem;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+.skills-list span {
+  background: #e3eafc;
+  color: #232946;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 8px 18px;
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.projects {
+  margin-bottom: 2.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 18px;
+}
+.project-card {
+  background: #f5f8fc;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.05);
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.project-img {
+  width: 100%;
+  max-width: 250px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  box-shadow: 0 2px 6px rgba(44,62,80,0.06);
+}
+.project-info h4 {
+  margin: 0 0 5px 0;
+}
+.project-info p {
+  color: #535875;
+  font-size: 1rem;
+  margin-bottom: 11px;
+}
+.btn-proj {
+  display: inline-block;
+  background: #2979ff;
+  color: #fff;
+  border-radius: 14px;
+  padding: 6px 15px;
+  margin-right: 7px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 7px;
+  transition: background 0.17s;
+}
+.btn-proj:hover {
+  background: #232946;
+}
+.btn-secondary {
+  background: #e3eafc;
+  color: #232946;
+}
+.btn-secondary:hover {
+  background: #232946;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.about {
+  margin-bottom: 2.7rem;
+}
+.about p {
+  color: #444;
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 370px;
+  margin: 0 auto;
+}
+.contact input,
+.contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #b8becd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contact button {
+  background: #2979ff;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  padding: 0.7rem;
+  font-size: 1.07rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 7px;
+  transition: background 0.2s;
+}
+.contact button:hover {
+  background: #232946;
+}
+
+footer {
+  margin: 2.5rem 0 0 0;
+  padding: 1.1rem 0 0.4rem 0;
+  text-align: center;
+  color: #888;
+  border-top: 1px solid #e5eaf2;
+  font-size: 1.01rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .portfolio-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .main-container,
+  .portfolio-root {
+    padding: 10px 2px;
+  }
+  .project-cards {
+    grid-template-columns: 1fr;
   }
 }
